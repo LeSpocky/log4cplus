@@ -75,6 +75,9 @@ endif (WIN32)
 
 add_library (${log4cplus} ${log4cplus_sources})
 
+set_property(TARGET ${log4cplus} PROPERTY CXX_STANDARD 11)
+set_property(TARGET ${log4cplus} PROPERTY CXX_STANDARD_REQUIRED ON)
+
 set (log4cplus_LIBS ${CMAKE_THREAD_LIBS_INIT})
 if (LIBRT)
   list (APPEND log4cplus_LIBS ${LIBRT})
